@@ -1,0 +1,61 @@
+@import '../settings/index';
+@import '../common/media';
+
+.authors-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+
+    @include media(lg) {
+        justify-content: flex-start;
+
+    }
+
+    &_author {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        justify-content: center;
+        padding: 0 20px;
+
+        @include media(lg) {
+            padding: 0;
+
+        }
+
+        &_avatar {
+            .avatar {
+                border-radius: 100%;
+                width: 100px;
+                height: 100px;
+
+                @include media(lg) {
+                    width: 150px;
+                    height: 150px;
+                }
+            }
+        }
+
+        &_name {
+            text-align: center;
+            font-size: 16px;
+            color: black !important;
+
+            &:hover {
+                color: red !important;
+            }
+        }
+
+    }
+}
+
+.authors-list-title {
+    font-size: 22px;
+    margin-bottom: 40px;
+    padding-left: 20px;
+
+    @include media(lg) {
+        padding-left: 0;
+    }
+}

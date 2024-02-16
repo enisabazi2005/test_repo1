@@ -1,0 +1,48 @@
+@import '../settings/index';
+@import '../common/media'; 
+
+.custom-table-review {
+    border: none!important;
+    margin: 0 auto 5rem !important;
+    tbody {
+        .rows {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #eff0f2 !important;
+            td {
+                border: none
+            }
+            .icon_description {
+                display: flex;
+                align-items: center;
+                min-width: 160px;
+                max-width: 160px;
+                img {
+                    width: 35px;
+                    height: 35px;
+                    margin-right: 7px;
+                }
+                span {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                }
+            }
+            .rating {
+                min-width: 110px;
+                max-width: 110px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+            }
+            .stars {
+                min-width: 110px;
+                max-width: 110px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

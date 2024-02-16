@@ -1,0 +1,27 @@
+@import '../settings/index';
+@import '../common/media'; 
+
+.custom-list-highlights {
+  list-style: none;
+  letter-spacing: 1.005px;
+  margin: 0 0 2.5rem !important;
+  max-width: 550px;
+
+  li {
+    margin-bottom: 1.2rem !important;
+
+    &:before {
+      background-color: transparent !important;
+      content: '✓' !important;
+      border: 0.5px #00d084 solid !important;
+      width: 19px !important;
+      height: 19px !important;
+      position: relative !important;
+      margin-right: 0.75rem !important;
+      top: -2.5px !important;
+      font-size: 9px;
+      padding: 4px 5px;
+      color: #7bdcb5;
+    }
+  }
+}

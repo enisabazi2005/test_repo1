@@ -1,0 +1,102 @@
+@import '../settings/index';
+@import '../common/media';
+
+.banner_comparison {
+    margin: 0 auto;
+    min-height: 200px;
+    margin-bottom: 40px;
+    max-width: 1160px;
+    &_row {
+        display: flex;
+        justify-content: space-between;
+    }
+    &--image {
+        position: relative;
+        display: none;
+        &__gradient {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            display: block;
+            width: 150px;
+            height: 100%;
+            min-height: auto;
+        }
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+        @media(min-width: $desktop) {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    &--text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 550px;
+        margin: 0 auto;
+        padding: 20px;
+        font-style: italic;
+        text-transform: uppercase;
+        @media(max-width: 1023px) {
+            text-align: center;
+        }
+        i {
+            display: block;
+            color: $white;
+            font-weight: 900;
+            font-size: 14px;
+        }
+        b {
+            display: block;
+            margin: 15px 0;
+            font-size: 28px;
+            line-height: 1.21;
+        }
+        br {
+            display: none;
+            @media(min-width: $desktop) {
+                display: block;
+            }
+        }
+        a {
+            display: block;
+            max-width: 346px;
+            padding: 9px;
+            font-weight: 900;
+            font-size: 20px;
+            text-align: center;
+            border: 1px solid #ffde22;
+            border-radius: 22px;
+            &:hover {
+                background-color: rgba(51, 51, 51, .5);
+            }
+        }
+        p {
+            display: block;
+            margin: 10px 0 0;
+            color: rgba(255, 255, 255, .8);
+            font-size: 10px;
+            font-style: normal;
+            text-align: center;
+            text-transform: none;
+        }
+        @media(min-width: $desktop) {
+            margin: 0;
+            padding: 20px 40px;
+            b {
+                font-size: 30px;
+            }
+        }
+    }
+    &--btn-wrapper {
+        max-width: 346px;
+        text-align: center;
+        @media(max-width: 1023px) {
+            margin: 0 auto;
+        }
+    }
+}

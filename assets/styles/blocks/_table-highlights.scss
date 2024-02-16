@@ -1,0 +1,56 @@
+@import '../settings/index';
+@import '../common/media'; 
+
+.custom-table-highlights{
+	border: none !important;
+	margin: 0 auto 80px;
+	display: table !important;
+	max-width: 680px !important;
+	tr{
+		padding: 4px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid #eff0f2;
+		width: 100%;
+		td{
+			display: flex;
+			align-items: center;
+			border: none;
+			padding: 8px 5px;
+			img{
+				width: 35px;
+				height: 35px;
+				margin-right: 7px;
+			}
+			span{
+				font-weight: bold;
+			}
+		}
+		td:nth-child(even) {
+			align-items: flex-end;
+			min-width: unset;
+			max-width: 150px;
+			p{
+				text-align: right;
+				margin: 0;
+			}
+			span{
+				display: flex;
+				justify-content: center;
+				background-color: #cf2e2e;
+				border-radius: 7.5px;
+				width: 150px;
+				cursor: pointer;
+				a{
+					color: white;
+					padding: 8px 0;
+					text-align: center;
+				}
+			}
+		}
+		td:nth-child(odd) {
+			text-transform: uppercase;
+		}
+	}
+}

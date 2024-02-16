@@ -1,0 +1,316 @@
+{
+    "key": "group_6348084e772aa",
+    "title": "Tips-block",
+    "fields": [
+        {
+            "key": "field_63481a8d4bdbb",
+            "label": "Tips",
+            "name": "tips",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_634924c48842a",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "Templates title",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_6348084eab2b6",
+                    "label": "Tips Template",
+                    "name": "tips_template",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Select a tips template to show:",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "top_tips": "Top Tips",
+                        "more_news": "More News",
+                        "latest_news": "Latest News",
+                        "category_features": "Category features"
+                    },
+                    "default_value": "top_tips",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_634809adf93a6",
+                    "label": "Select tips",
+                    "name": "select_tips",
+                    "aria-label": "",
+                    "type": "relationship",
+                    "instructions": "Selected posts will be shown in the selected template",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6348084eab2b6",
+                                "operator": "==",
+                                "value": "more_news"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6348084eab2b6",
+                                "operator": "==",
+                                "value": "top_tips"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "tips"
+                    ],
+                    "taxonomy": "",
+                    "filters": [
+                        "search",
+                        "taxonomy"
+                    ],
+                    "return_format": "id",
+                    "min": 3,
+                    "max": "",
+                    "elements": [
+                        "featured_image"
+                    ]
+                },
+                {
+                    "key": "field_635a66344c58e",
+                    "label": "Latest News",
+                    "name": "default_latest_news",
+                    "aria-label": "",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6348084eab2b6",
+                                "operator": "==",
+                                "value": "latest_news"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "relationshipLatest": "Choose Latest News",
+                        "defaultLatest": "Default Latest News"
+                    },
+                    "default_value": "defaultLatest:  Default Latest News",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_6351054d94a35",
+                    "label": "Steps",
+                    "name": "steps",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "'Steps' represents how many posts will be shown by default and after clicking the 'Load More' button.",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6348084eab2b6",
+                                "operator": "==",
+                                "value": "category_features"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 15,
+                    "min": 1,
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_635139b271d81",
+                    "label": "Select Category",
+                    "name": "select_category",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Select a category of posts to be shown in this template",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6348084eab2b6",
+                                "operator": "==",
+                                "value": "category_features"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6348084eab2b6",
+                                "operator": "==",
+                                "value": "latest_news"
+                            },
+                            {
+                                "field": "field_635a66344c58e",
+                                "operator": "==",
+                                "value": "defaultLatest"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": [],
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_635a676923ef5",
+                    "label": "Select Latest Posts",
+                    "name": "select_latest_posts",
+                    "aria-label": "",
+                    "type": "relationship",
+                    "instructions": "3 posts should be selected in this template to show Latest News",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_635a66344c58e",
+                                "operator": "==",
+                                "value": "relationshipLatest"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6348084eab2b6",
+                                "operator": "==",
+                                "value": "latest_news"
+                            },
+                            {
+                                "field": "field_635a66344c58e",
+                                "operator": "!=",
+                                "value": "defaultLatest"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "tips"
+                    ],
+                    "taxonomy": "",
+                    "filters": [
+                        "search",
+                        "taxonomy"
+                    ],
+                    "return_format": "id",
+                    "min": 3,
+                    "max": 3,
+                    "elements": [
+                        "featured_image"
+                    ]
+                },
+                {
+                    "key": "field_647f2bcbc9322",
+                    "label": "Skip Posts",
+                    "name": "skip_posts",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Skip first 3 posts in this template",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6348084eab2b6",
+                                "operator": "==",
+                                "value": "category_features"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/tips"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1686056026
+}

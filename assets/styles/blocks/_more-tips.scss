@@ -1,0 +1,117 @@
+@import '../settings/index';
+@import '../common/media'; 
+
+.more-tips {
+    &__title {
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+        width: 100%;
+
+        &__text {
+
+            background: linear-gradient(68deg, #252525, #252525 calc(100% - 30px), #fff 30px);
+            color: #fff;
+            display: block;
+            font: 700 15px/1 Roboto Condensed, Roboto, Arial, Helvetica, sans-serif;
+            letter-spacing: 1px;
+            max-width: calc(100% - 60px);
+            min-width: 160px;
+            overflow: hidden;
+            padding: 7px 35px 7px 12px;
+            position: relative;
+            text-overflow: ellipsis;
+            text-transform: uppercase;
+            white-space: nowrap;
+            margin-bottom: 0;
+
+            @include media (lg) {
+                min-width: 220px;
+            }
+        }
+    }
+
+    &__blocks {
+
+        @include media (lg) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__block {
+            display: flex;
+            margin-bottom: 16px;
+            height: 90px;
+
+            @include media (lg) {
+                width: calc(50% - 20px);
+                height: 120px;
+                margin-bottom: 20px;
+                padding-right: 20px;
+            }
+
+            &__image {
+                img {
+                    max-width: 120px;
+                    width: 120px;
+                    height: 90px;
+                    object-fit: cover;
+
+                    @include media (lg) {
+                        height: 120px;
+                    }
+                }
+            }
+
+            &__text {
+                display: flex;
+                width: 100%;
+                padding-left: 14px;
+                background-color: #F5F5F5;
+
+                @include media (lg) {
+                    position: relative;
+                    flex-direction: column;
+                    padding: 10px;
+                }
+
+                time {
+                    display: none;
+                    color: #252525;
+                    font-size: 13px;
+
+                    @include media (lg) {
+                        display: block;
+                        position: absolute;
+                        bottom: 5px;
+                    }
+                }
+
+                .module_link {
+                    display: flex;
+
+                    p:hover {
+                        color: #e70016;
+                    }
+                }
+
+                p {
+                    font-family: 'Roboto';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 19px;
+                    display: flex;
+                    align-items: center;
+                    color: #252525;
+                    margin: 0;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

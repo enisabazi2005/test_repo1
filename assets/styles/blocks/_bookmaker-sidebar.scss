@@ -1,0 +1,141 @@
+@import '../settings/index';
+@import '../common/media'; 
+
+.sidebar-container{
+    max-width: 355px;
+    @include media ( lg ) {
+        max-width: 360px;
+    }
+    &__bookmakers{
+        font-family: monospace;
+        &__box{
+            gap: 15px;
+            padding: 0 10px 0 10px;
+            display: flex;
+            border: solid 1px #999999;
+            overflow: hidden;
+            position: relative;
+            justify-content: space-between;
+            border-radius: 5px;
+            &__bookmaker{
+                &__label{
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    top: 13px;
+                    left: -26px;
+                    width: 105px;
+                    height: 25px;
+                    background-color: #F9941C;
+                    transform: rotate(-45deg);
+                    font-weight: 700;
+                    font-size: 10px;
+                    text-align: center;
+                    color: #FFFFFF;
+                    padding: 0;
+                    box-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+                    text-transform: uppercase;
+                    p{
+                        padding: 0 20px;
+                        line-height: 10px;
+                        margin: 0;
+                    }
+                }
+                &__group{
+                    margin-top: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    &__logo{
+                        width: 85px;
+                        height: 85px;
+                        padding: 10px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        overflow: hidden;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                    &__stars{
+                        margin: 10px 0 13px;
+                    }
+                }
+
+            }
+            &__offer{
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: space-around;
+                width: 100%;
+                p{
+                    margin: 0;
+                }
+                &__text{
+                    font-size: 18px;
+                    font-weight: 700;
+                    margin: 0;
+                    padding: 8px 0;
+                    @include media ( lg ) {
+                        padding: 15px 0;
+                    }
+                }
+                &__text-under{
+                    p{
+                    font-size: 10px;
+                    color: #777777;
+                    margin: 10px 0 8px 0;
+                    }
+                }
+                    &__btn{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: 1px solid #F9941C;
+                        box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.1);
+                        border-radius: 20px;
+                        width: 100%;
+                        height: 36px;
+                        display: flex;
+                        font-weight: 700;
+                        align-items: center;
+                        position: relative;
+                        p{
+                            margin: 0;
+                            font-size: 16px;
+                        }
+                        img{
+                            width: 7px;
+                            height: 13px;
+                            position: absolute;
+                            right: 0;
+                            margin-right: 10px;
+                        }
+                    }
+            }
+        }
+
+            .sidebar-container__bookmakers__box__offer__btn:hover{
+                background-color: #F9941C !important;
+                img{
+                    filter: brightness(0) invert(1);
+                }
+            }
+
+        &__warning{
+            p{
+                margin: 5px 0;
+                font-size: 10px;
+                text-align: center;
+                color: #777777;
+            }
+        }
+    }
+}

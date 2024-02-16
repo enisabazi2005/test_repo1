@@ -1,0 +1,33 @@
+@import '../settings/index';
+@import '../common/media'; 
+
+.iframe-container{
+    position: relative;
+    width: 100%;
+    margin: 0 0 20px;
+    .iframe-widget-link{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        opacity: 0;
+    }
+    .iframe-widget{
+        border: none;
+        width: 100%;
+    }
+}
+.image-widget-container{
+    position: relative;
+    width: 100%;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px;
+    .image-widget{
+        max-width: 100%;
+        object-fit: cover;
+    }
+}

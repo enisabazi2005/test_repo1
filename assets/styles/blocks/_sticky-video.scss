@@ -1,0 +1,60 @@
+@import '../settings/index';
+@import '../common/media'; 
+
+.allContainer {
+    width: 100%;
+    max-height: 250px;
+    min-height: 200px;
+
+    @include media (md) {
+        width: 100%;
+        max-height: 400px;
+        min-height: 350px;
+    }
+
+    .videoContainer {
+        position: relative;
+        width: 100%;
+
+        .stickyVideo {
+            width: 100%;
+            max-height: 250px;
+            min-height: 200px;
+
+            @include media (md) {
+                width: 100%;
+                max-height: 400px;
+                min-height: 350px;
+            }
+        }
+    }
+
+    .allowSticky {
+        position: relative;
+
+        @include media (md) {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            width: 260px;
+            z-index: 999;
+        }
+
+        @include media (lg) {
+            width: 350px;
+            height: 200px;
+        }
+
+        .stickyVideo {
+            width: 100%;
+            max-height: 200px;
+            min-height: 200px;
+
+            @include media (md) {
+                width: 100%;
+                max-height: 100%;
+                min-height: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,83 @@
+// 1. Basic variables
+// 1.1 Colors
+$black-dark: #000;
+$black: #0e0e0e;
+$black-light: #222;
+$gray-100: #f1f1f1;
+$gray-150: #ccc;
+$gray-dark: #777;
+$gray: #eee;
+$gray-light: #f5f5f5;
+$gray-900: #252525;
+$gray-600: #666;
+$white: #fff;
+$red: #e70016;
+$orange: #f60;
+$orange-900: #f9941c;
+$yellow: #ff3;
+$yellow-bets: #ffdf00;
+$yellow-read-more: #d6c91e;
+$blue: #0c0c44;
+$green: #009f27;
+$green-100: #0edd98;
+
+// 1.2 Other
+
+// 2. Work variables
+// 2.1 Colors
+$main-color: $red;
+$base-color: $blue;
+$base-color-es: $orange-900;
+$base-color-br: $green;
+
+// 2.2 Typography (fonts and text variables)
+$text-color: $black;
+$f-family-base: 'Roboto', Arial, Helvetica, sans-serif;
+$f-family-add: 'Roboto Condensed', 'Roboto', Arial, Helvetica, sans-serif;
+$f-size-base: 15px;
+$lineheight-base: 1.47;
+
+$f-size-h1: 22px;
+$f-size-h1-alt: 24px;
+
+// 2.3 Media
+// 2.3.1 Mobile first
+$phone-xs: 375px;
+$phone: 640px;
+$tablet: 768px;
+$desktop: 1024px;
+$desktop-xl: 1440px;
+$desktop-2xl: 1700px;
+// 2.3.2 Desktop first
+$desktop-df: 1023px;
+$tablet-df: 767px;
+$phone-df: 639px;
+
+// 2.4 Other
+$b-radius-base: 4px;
+
+// 2.6 Nav and links
+$link-main-color: $main-color;
+$link-main-hover: $black;
+$link-active-hover: $black;
+
+$nav-color: $black-light;
+$nav-hover: darken($nav-color, 0%);
+
+// 2.7 Buttons
+$btn-main-color: $white;
+$btn-main-border: $main-color;
+$btn-main-bg: $main-color;
+$btn-main-color-hover: darken($main-color, 20%);
+
+// 2.8 Titles
+
+$title-color: $white;
+$title-bg: $main-color;
+$title-bg-alt: $black-dark;
+$title-border: $main-color;
+
+// 2.9 Articles
+$article-h1: 30px;
+$article-preview-h1: 20px;
+$article-preview-h1-alt: 18px;

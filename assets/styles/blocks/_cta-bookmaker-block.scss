@@ -1,0 +1,127 @@
+@import '../settings/index';
+@import '../common/media'; 
+
+.cta-list-template {
+
+    ol {
+        counter-reset: item;
+        list-style-type: none;
+        margin-block: 0px 8px;
+        padding: 0;
+
+        a {
+            color: #159E65;
+        }
+
+        a:hover {
+            color: #159E65;
+        }
+
+        li { 
+            display: block;
+            font-size: 16px;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+
+        li:before { 
+            content: counter(item) "  ";
+            counter-increment: item;
+            margin-right: 8px;
+        }
+
+        li:last-child {
+            margin-bottom: 24px;
+        }
+    }
+  
+    .cta-tag {
+        border-radius: 4px;
+        border: 1px solid #FFF;
+    }
+
+    @include media(lg) {
+        .cta-offer-button {
+            width: 185px;
+        }
+    }
+
+    .cta-template-image {
+        margin-bottom: 8px;
+    }
+}
+
+.cta-single-template {
+
+    .cta-single-details {
+
+        @include media(lg) {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+        }
+
+        .cta-single-text-offer {
+            word-wrap: break-word;
+            margin-block: 8px 12px;
+            font-size: 16px;
+            line-height: 24.8px;
+            
+            @include media(lg) {
+                width: 276px;
+                margin-block: 0;
+            }
+        } 
+    }
+
+    
+    .cta-tag {
+        border-radius: 2px;
+    }
+}
+
+.cta-bookmaker-template {
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-block: 20px;
+    padding: 40px;
+    position: relative;
+
+    .cta-template-image {
+        width: 184px;
+        height: 70px;
+    }
+    
+    .cta-tag {
+        font-size: 14px;
+        font-weight: 700;
+        left: -9px;
+        line-height: 21px;
+        padding-inline: 5px;
+        position: absolute;
+        top: 15px;
+        padding: 2px 8px;
+    }
+    
+    .gift-svg {
+        object-fit: contain;
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+    }
+    
+    .cta-offer-button {
+        align-items: center;
+        border-radius: 5px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24.8px;
+        padding-inline: 24px;
+        min-height: 49px;
+    }
+}

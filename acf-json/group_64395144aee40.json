@@ -1,0 +1,314 @@
+{
+    "key": "group_64395144aee40",
+    "title": "ES Tips",
+    "fields": [
+        {
+            "key": "field_64395144ec2d3",
+            "label": "ES Tips",
+            "name": "es_tips",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_643e9e8cb9461",
+                    "label": "Template Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "It will be shown at the top of the layout.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "e.g. Category Features",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_6448d1c19e6a0",
+                    "label": "Templates",
+                    "name": "es_templates",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "Select a tips template to show:",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "top_tips": "Top Tips",
+                        "more_news": "More News",
+                        "latest_news": "Latest Tips",
+                        "category_features": "Category features"
+                    },
+                    "default_value": "top_tips",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6447d60b80089",
+                    "label": "Select tips from ES site",
+                    "name": "select_es_tips",
+                    "aria-label": "",
+                    "type": "relationship",
+                    "instructions": "Selected posts will be shown in the selected template",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6448d1c19e6a0",
+                                "operator": "==",
+                                "value": "top_tips"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6448d1c19e6a0",
+                                "operator": "==",
+                                "value": "more_news"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "bookmakers"
+                    ],
+                    "taxonomy": "",
+                    "filters": [
+                        "search"
+                    ],
+                    "return_format": "id",
+                    "min": 3,
+                    "max": "",
+                    "elements": [
+                        "featured_image"
+                    ]
+                },
+                {
+                    "key": "field_6448d2609e6a2",
+                    "label": "Latest Tips",
+                    "name": "latest_tips",
+                    "aria-label": "",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6448d1c19e6a0",
+                                "operator": "==",
+                                "value": "latest_news"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "relationshipLatest": "Choose Latest Tips",
+                        "defaultLatest": "Default Latest Tips"
+                    },
+                    "default_value": "defaultLatest:  Default Latest Tips",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "layout": "horizontal"
+                },
+                {
+                    "key": "field_6448d2cb9e6a3",
+                    "label": "Steps",
+                    "name": "steps",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "'Steps' represents how many posts will be shown by default and after clicking the 'Load More' button.",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6448d1c19e6a0",
+                                "operator": "==",
+                                "value": "category_features"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 10,
+                    "min": 1,
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_64396181199f4",
+                    "label": "ES Tips Categories",
+                    "name": "es_tips_categories",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "The categories below are from ES site, select one to show posts from that category.",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6448d1c19e6a0",
+                                "operator": "==",
+                                "value": "category_features"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6448d1c19e6a0",
+                                "operator": "==",
+                                "value": "latest_news"
+                            },
+                            {
+                                "field": "field_6448d2609e6a2",
+                                "operator": "==",
+                                "value": "defaultLatest"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": [],
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6448d3579e6a6",
+                    "label": "Select latest tips from ES",
+                    "name": "select_latest_es_tips",
+                    "aria-label": "",
+                    "type": "relationship",
+                    "instructions": "3 posts should be selected in this template to show Latest News",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6448d2609e6a2",
+                                "operator": "==",
+                                "value": "relationshipLatest"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_6448d1c19e6a0",
+                                "operator": "==",
+                                "value": "latest_news"
+                            },
+                            {
+                                "field": "field_6448d2609e6a2",
+                                "operator": "!=",
+                                "value": "defaultLatest"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "tips"
+                    ],
+                    "taxonomy": "",
+                    "filters": [
+                        "search"
+                    ],
+                    "return_format": "id",
+                    "min": 3,
+                    "max": 3,
+                    "elements": [
+                        "featured_image"
+                    ]
+                },
+                {
+                    "key": "field_648079c634e6c",
+                    "label": "Skip Posts",
+                    "name": "es_skip_posts",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Skip first 3 posts in this template",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6448d1c19e6a0",
+                                "operator": "==",
+                                "value": "category_features"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/es-tips"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1686141503
+}

@@ -1,0 +1,113 @@
+@import '../settings/index';
+@import '../common/media'; 
+
+.countdown {
+    &__block {
+        display: flex;
+        flex-direction: column;
+        max-width: 1000px;
+        margin-inline: auto;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15px;
+
+        @include media ( lg ) {
+            flex-direction: row;
+            padding: 9px;
+        }
+    
+        &__details {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 10px;
+
+            @include media ( lg ) {
+                margin-bottom: 0;
+            }
+
+            &__teams {
+
+                &__team-name {
+                    display: inline-block;
+                    color: white;
+                    margin: 0;
+                    font-weight: 700;
+                    font-size: 20px;
+                    line-height: 24px;
+                    text-transform: uppercase;
+
+                    @include media ( lg ) {
+                        font-size: 24px;
+                    }
+                }
+
+                &__vs-text {
+                    color: #05102a;
+                    text-transform: lowercase;
+                    font-size: 20px;
+                    line-height: 26px;
+                    font-weight: 700;
+
+                    @include media ( lg ) {
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            &__text {
+                margin: 5px 0 0;
+                color: hsla(0,0%,100%,.6);
+                font-weight: 300;
+                font-size: 13px;
+                line-height: 1.3;
+                text-transform: none;
+            }
+        }
+    
+        &__time {
+            display: flex;
+            flex-direction: column;
+            color: white;
+            align-items: center;
+
+            &__text {
+                font-size: 10px;
+                line-height: 12px;
+                letter-spacing: .5px;
+                margin: 0;
+            }
+
+            &__datatime {
+                font-size: 30px;
+                line-height: 36px;
+                margin: 0;
+            }
+        }
+
+        &__button {
+            background: #53526a;
+            width: auto;
+            padding: 10px 20px;
+            color: #fff;
+            text-align: center;
+            font-weight: 600;
+            text-decoration: none;
+            background-color: rgba(5,16,42,.5);
+            border-radius: 20px;
+            -webkit-transition: all .3s;
+            transition: all .3s;
+            min-width: 180px;
+            margin-top: 10px;
+            font-size: 15px;
+
+            @include media ( lg ) {
+                margin-top: 0;
+            }
+
+            a {
+                color: white;
+            }
+        }
+    }
+}

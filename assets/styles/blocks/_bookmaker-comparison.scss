@@ -1,0 +1,49 @@
+@import '../settings/index';
+@import '../common/media'; 
+
+.custom-table-compare{
+    overflow-x: auto;
+	margin: 0 auto 80px;
+
+    table{
+        border: none !important;
+        display: table !important;
+        max-width: 680px !important;
+        overflow-x: scroll;
+        tr{
+            padding: 4px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eff0f2;
+            width: 100%;
+            &:first-child{
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            td{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: none !important;
+                padding: 8px 5px;
+                min-width: 150px;
+                max-width: 150px;
+                text-align: center;
+                img{
+                    width: 35px;
+                    height: 35px;
+                    margin-right: 7px;
+                }
+                span{
+                    font-weight: bold;
+                }
+                &:first-child{
+                    justify-content: left;
+                    text-align: left;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

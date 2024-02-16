@@ -1,0 +1,11 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+    width="17" height="15">
+    <defs>
+        <linearGradient id="half_grad">
+            <stop offset="50%" stop-color="white"/>
+            <stop offset="50%" stop-color="white" stop-opacity="1" />
+        </linearGradient>
+    </defs>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.4 11.3806L4.44458 13.3131L5.2 9.22L2 6.32123L6.42229 5.72405L8.4 2L10.3777 5.72405L14.8 6.32123L11.6 9.22L12.3554 13.3131L8.4 11.3806Z"
+     fill="transparent" stroke-width="1.152" stroke="#FFA300"/>
+</svg>

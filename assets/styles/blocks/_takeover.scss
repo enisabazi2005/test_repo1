@@ -1,0 +1,41 @@
+@import '../settings/index';
+@import '../common/media'; 
+
+
+.takeover {
+    display: flex;
+    justify-content: center;
+    padding-inline: 10px;
+
+    @include media(lg) {
+        padding-inline: 0;
+    }
+
+    .top-banner-desktop {
+        display: none;
+
+        @include media(lg) {
+            display: block;
+        }
+    }
+
+    .top-banner-mobile {
+        @include media(lg) {
+            display: none;
+        }
+    }
+}
+
+.left-banner, .right-banner {
+    position: absolute;
+    display: none;
+    max-width: 120px;
+}
+
+.left-banner {
+    left: 0;
+}
+
+.right-banner {
+    right: 0;
+}

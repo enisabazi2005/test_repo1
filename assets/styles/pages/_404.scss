@@ -1,0 +1,118 @@
+@import '../settings/index';
+@import '../common/media';
+
+.page-not-found-wrapper{
+    height: 76vh;
+    .page-not-found-text{
+        width: 33.33%;
+    }
+    .page-not-found-image{
+        width: 20%;
+    }
+}
+.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 20px;
+
+    @include media ( md ) {
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        padding: 130px 0;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        @include media ( lg ) {
+            width: 33.33%;
+            font-size: 18px;
+        }
+
+        h3 {
+            color: #222;
+            font-size: 60px;
+            margin: 0;
+
+            @include media ( md ) {
+                font-size: 120px;
+            }
+        }
+
+        b {
+            font-size: 30px;
+        }
+
+        p {
+            margin: 0 0 20px;
+        }
+
+        a {
+            background-color: #e70016;
+            border-radius: 20px;
+            box-shadow: 0 3px 0 0 rgb(0 0 0 / 10%);
+            color: #fff;
+            display: block;
+            font-size: 20px;
+            margin: 35px auto;
+            padding: 8px 0;
+            position: relative;
+            transition: background-color .3s ease;
+            width: 100%;
+
+            @include media ( md ) {
+                width: 320px;
+            }
+
+            &:hover {
+                background-color: #ad1c20;
+                transition: background-color .3s ease;
+            }
+        }
+
+        a::after {
+            border-style: solid;
+            border-width: 2px 2px 0 0;
+            content: "";
+            height: 10px;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+            transition: all .2s linear;
+            width: 10px;
+        }
+    }
+
+    &__error {
+        @include media ( lg ) {
+            width: 33.33%;
+        }
+
+        &__image {
+            align-items: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            display: flex;
+            justify-content: center;
+            min-height: 250px;
+
+            span {
+                font-size: 30px;
+                font-weight: 700;
+                text-align: center;
+                text-transform: uppercase;
+                width: 150px;
+
+                @include media ( lg ) {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}

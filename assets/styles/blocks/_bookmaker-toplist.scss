@@ -1,0 +1,389 @@
+@import '../settings/index';
+@import '../common/media'; 
+
+.bookmaker {
+  font-family: monospace;
+  &__disclosure{
+    display: flex;
+    font-size: 12px;
+    padding-bottom: 10px;
+    gap: 2px;
+    span{
+      svg{
+        width: 10px;
+        height: 10px;
+      }
+    }
+    &__text{
+      p{
+        margin: 0;
+        display: inline;
+      }
+      span{
+        color: $main-color;
+        cursor: pointer;
+      }
+      &__read-less{
+        display: none;
+      }
+      &__read-more{
+        display: inline-block;
+      }
+      &__first{
+        display: inline;
+      }
+      &__second{
+        display: none;
+      }
+    }
+  }
+  &__row {
+    box-sizing: border-box;
+    margin-bottom: 40px;
+
+    &__holder {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+      &::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: -1px;
+        border: 2px solid #d52332;
+        border-radius: 7px;
+        opacity: 0;
+        transition: opacity 0.2s linear;
+        content: "";
+        pointer-events: none;
+      }
+
+      &:hover {
+        @include media(lg) {
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+
+      .exclusive & {
+        margin-top: 10px;
+
+        &::before {
+          position: absolute;
+          top: -12px;
+          left: -5px;
+          z-index: 5;
+          padding: 1px 32px 1px 15px;
+          color: $white;
+          font-weight: 400;
+          text-transform: uppercase;
+          background: linear-gradient(
+            70deg,
+            #d52332 0%,
+            #d52332 calc(100% - 10px),
+            transparent 10px
+          );
+          box-shadow: -3px 2px 4px 0 rgba(0, 0, 0, 0.2);
+          content: attr(data-title);
+        }
+      }
+    }
+    .bookmaker-offers__logo {
+      border-radius: 5px 0 5px 5px;
+      display: flex;
+      height: 138px;
+      @include media(md) {
+        height: auto;
+      }
+
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      width: 150px;
+      .img-holder {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: flex-start;
+        padding: 15px 40px 15px 15px;
+        width: 100%;
+        img {
+          position: relative;
+          width: 300px;
+          z-index: 2;
+          border-style: none;
+          display: block;
+          height: auto;
+          margin-left: 0;
+          margin-right: 0;
+          max-width: 100%;
+        }
+      }
+    }
+    .bookmaker-offers__info {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: calc(90% - 150px);
+      padding: 10px;
+      color: $black-light;
+      margin-block: 15px;
+
+      @include media(md) {
+        flex-grow: 1;
+        width: calc(90% - 167px);
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      .name {
+        margin-bottom: 5px;
+        color: inherit;
+        text-transform: capitalize;
+      }
+
+      .text {
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: 1.2;
+
+        @media (min-width: 375px) {
+          font-size: 22px;
+          line-height: 1.15;
+        }
+      }
+
+      @include media(lg) {
+        flex-grow: 1;
+        width: calc(100% - 410px);
+      }
+    }
+    .bookmaker-offers__tags {
+      display: none;
+
+      span {
+        margin: 0 4px 8px;
+        padding: 4px 12px;
+        color: $black-light;
+        line-height: 1;
+        border: solid 1px #979797;
+        border-radius: 4px;
+        transition: border-color 0.2s linear;
+      }
+
+      @include media(md) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -4px;
+        text-transform: capitalize;
+      }
+    }
+
+    .mark-list {
+      display: inline-flex;
+      flex-wrap: wrap;
+      color: $gray-600;
+      font-weight: 700;
+      span {
+        margin-left: 5px;
+      }
+
+      li {
+        margin-right: 10px;
+        margin-bottom: 5px;
+      }
+      .icons {
+        padding: 0 7px 0 0;
+      }
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
+    .bookmaker-offers__link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      order: 3;
+      width: 100%;
+      padding: 10px 10px 10px 0;
+
+      .score-text {
+        display: flex;
+        flex-direction: column;
+        margin: 0 5px;
+        text-align: center;
+      }
+
+      .value {
+        color: $black-light;
+        font-weight: 700;
+      }
+
+      .review-link {
+        color: $gray-600;
+        font-size: 12px;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      @media (min-width: $desktop) {
+        flex-direction: column;
+        align-items: flex-end;
+        width: 190px;
+      }
+    }
+
+    .bookmaker-offers__score {
+      position: absolute;
+      top: 140px;
+      left: 10px;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      max-width: 150px;
+
+      @media (min-width: $tablet) {
+        position: static;
+      }
+
+      .score-rating {
+        display: flex;
+        align-items: center;
+      }
+
+      .score-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 41px;
+        height: 36px;
+        margin-bottom: 0;
+        padding: 5px;
+        color: #d52332;
+        font-weight: 700;
+        font-size: 8px;
+        text-align: center;
+        background: none;
+        border: solid 1px rgba(213, 35, 50, 0.7);
+        border-radius: 4px;
+      }
+      @include media(lg) {
+        flex-direction: row;
+        max-width: none;
+        margin-bottom: 20px;
+      }
+    }
+
+    .score-box__rating {
+      font-size: 22px;
+      line-height: 1.1;
+    }
+
+    .bookmaker-offer__btn {
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      min-width: 140px;
+      max-width: calc(100% - 170px);
+      margin-left: 10px;
+      margin-left: auto;
+      padding: 7px 15px;
+      color: $white;
+      font-weight: 700;
+      font-size: 12px;
+      text-align: center;
+      text-transform: uppercase;
+      background-color: $orange;
+      border-radius: 24px;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1);
+
+      &:hover {
+        box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.2);
+        transition: box-shadow 0.2s linear;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        width: 8px;
+        height: 8px;
+        transform: translateY(-50%) rotate(45deg);
+        border-style: solid;
+        border-width: 2px 2px 0 0;
+        transition: all 0.2s linear;
+      }
+
+      @include media(lg) {
+        min-width: 120px;
+        max-width: none;
+        margin-left: 0;
+      }
+    }
+    *:lang(pt-BR) {
+      .bookmaker-offer__btn {
+        background: #009f27;
+        padding: 10px 25px 10px 15px;
+        color: white;
+        border-radius: 24px;
+        border: 1px solid #009f27;
+        box-shadow: 0 3px 1px 0 rgb(0 0 0 / 20%);
+        line-height: 1;
+        &:hover {
+          background-color: $green;
+          box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.2);
+          transition: box-shadow 0.2s linear;
+        }
+
+        @include media(lg) {
+          min-width: 103px;
+          max-width: 60px;
+        }
+      }
+    }
+
+    *:lang(es) {
+      .bookmaker-offer__btn {
+        background: $white;
+        padding: 10px 25px 10px 15px;
+        color: $black;
+        border-radius: 24px;
+        border: 1px solid #009f27;
+        box-shadow: 0 3px 1px 0 rgb(0 0 0 / 20%);
+        line-height: 1.2;
+        &:hover {
+          background-color: $orange-900;
+          box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.2);
+          transition: box-shadow 0.2s linear;
+        }
+
+        @include media(lg) {
+          min-width: 103px;
+          max-width: 60px;
+        }
+      }
+    }
+    .bookmaker-offers__addtext {
+      color: $gray-dark;
+      font-size: 12px;
+      line-height: 1.2;
+    }
+  }
+}

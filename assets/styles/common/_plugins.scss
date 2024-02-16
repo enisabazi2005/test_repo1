@@ -1,0 +1,47 @@
+.sticky.sticky--column {
+  opacity: 0;
+}
+
+.sticky.sticky--row {
+  max-width: 1000px;
+  padding: 0 10px;
+}
+.sticky.sticky--column p {
+  margin: 0;
+}
+
+.v-catena-takeover-banner {margin-top: 15px;}
+
+.sticky.sticky--row {
+    @media(min-width: $tablet) {
+        padding: 0 20px;
+    }
+}
+
+.vcu_faq-accordion-wrapper {
+  .vcu_faq-accordion-title-text {
+      margin: 0;
+      font-size: 16px;
+  }
+
+  .vcu_faq-accordion-panel {
+      p {
+          margin: 0;
+      }
+  }
+}
+
+.vcu_faq-accordion-wrapper > li {
+  margin: 0 !important;
+  padding-left: 0 !important;
+}
+.bet-box__bookmakers li{
+  gap: 10px;
+  @media(min-width: 480px) {
+    gap: 20px;
+  }
+}
+.bet-box__bookmakers-odds{
+  padding-inline: 5px;
+  width: 100%;
+}
